@@ -1,0 +1,26 @@
+name: 'kraken'
+version: '1.0.0'
+config-version: 2
+
+profile: 'kraken'
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+
+vars:
+  csv_path: "../Andrew - Kraken Accelerator/data/oracle_address_sample_100_au_streets.csv"
+
+models:
+  kraken:
+    landing:
+      +schema: landing
+      +materialized: table
+    bronze:
+      +schema: bronze
+      +materialized: table
+    silver:
+      +schema: silver
+      +materialized: table
+    gold:
+      +schema: gold
+      +materialized: table

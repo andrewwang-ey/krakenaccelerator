@@ -1,0 +1,1 @@
+SELECT * FROM read_csv_auto('{{ var("csv_path") }}')

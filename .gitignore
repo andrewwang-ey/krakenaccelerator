@@ -1,0 +1,4 @@
+db/
+*.duckdb
+__pycache__/
+.dbt/
