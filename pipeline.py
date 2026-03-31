@@ -127,7 +127,7 @@ for col in filterable_cols:
     if value is not None:
         filters[col] = value
 
-print("\nCohort name (e.g. victoria_billing):")
+print("\nCohort name (e.g. Cohort 1: Billing State Victoria only):")
 cohort_name = input("> ").strip() or "unnamed_cohort"
 
 
@@ -206,8 +206,8 @@ if result.returncode != 0:
 # ── Step 8: Log to cohort_history ─────────────────────────────────────────────
 con = duckdb.connect(str(db_path))
 
-con.execute("""
-    CREATE TABLE IF NOT EXISTS cohort_history (
+cohort_schema = """
+    CREATE TABLE cohort_history (
         run_id        INTEGER PRIMARY KEY,
         cohort_name   VARCHAR,
         kraken_entity VARCHAR,
@@ -217,7 +217,23 @@ con.execute("""
         rows_loaded   INTEGER,
         run_at        TIMESTAMP
     )
-""")
+"""
+# Drop and recreate if schema has changed (column count mismatch)
+table_exists = con.execute("""
+    SELECT COUNT(*) FROM information_schema.tables
+    WHERE table_name = 'cohort_history'
+""").fetchone()[0]
+
+if table_exists:
+    col_count = con.execute("""
+        SELECT COUNT(*) FROM information_schema.columns
+        WHERE table_name = 'cohort_history'
+    """).fetchone()[0]
+    if col_count != 8:
+        con.execute("DROP TABLE cohort_history")
+        con.execute(cohort_schema)
+else:
+    con.execute(cohort_schema)
 
 rows_loaded = con.execute(
     "SELECT COUNT(*) FROM gold.gold_output"

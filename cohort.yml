@@ -1,5 +1,3 @@
-cohort_name: testing bat system
+cohort_name: cohort 4 testsetset
 filters:
-  address_type: SERVICE
-  is_primary: Y
-  state: NSW
+  STATE: NSW

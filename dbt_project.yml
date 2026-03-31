@@ -1,21 +1,19 @@
-name: 'kraken'
-version: '1.0.0'
+name: kraken
+version: 1.0.0
 config-version: 2
-
-profile: 'kraken'
-
-model-paths: ["models"]
-macro-paths: ["macros"]
-
+profile: kraken
+model-paths:
+- models
+macro-paths:
+- macros
 vars:
-  csv_path:             "data/oracle_address_sample_100_au_streets.csv"
-  filters:              {}    # overridden at runtime by pipeline.py
-  required_fields:      []    # overridden at runtime by pipeline.py
-  column_map:           {}    # overridden at runtime by pipeline.py
-  transformations:      {}    # overridden at runtime by pipeline.py
-  active_record_filter: {}    # overridden at runtime by pipeline.py
-  row_limit:            25    # max rows sent to Kraken per run
-
+  csv_path: data/oracle_address_sample_100_au_streets.csv
+  filters: {}
+  required_fields: []
+  column_map: {}
+  transformations: {}
+  active_record_filter: {}
+  row_limit: 25
 models:
   kraken:
     landing:

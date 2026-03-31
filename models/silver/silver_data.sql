@@ -3,6 +3,7 @@
 {% set source_cols = col_map.values() | list %}
 
 SELECT
+{%- if source_cols %}
 {%- for source_col in source_cols %}
   {%- if source_col in transforms %}
     {%- set t = transforms[source_col] %}
@@ -19,6 +20,9 @@ SELECT
   {%- endif %}
   {%- if not loop.last %},{% endif %}
 {%- endfor %}
+{%- else %}
+  *
+{%- endif %}
 FROM {{ ref('bronze_data') }}
 WHERE 1=1
 {%- if var('active_record_filter', {}) %}
