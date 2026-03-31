@@ -3,7 +3,6 @@ db/
 venv/
 __pycache__/
 .dbt/
-profiles.yml
 target/
 logs/
 dbt_packages/
