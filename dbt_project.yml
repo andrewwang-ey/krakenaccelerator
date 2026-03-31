@@ -8,7 +8,7 @@ model-paths: ["models"]
 macro-paths: ["macros"]
 
 vars:
-  csv_path: "../Andrew - Kraken Accelerator/data/oracle_address_sample_100_au_streets.csv"
+  csv_path: "Andrew - Kraken Accelerator/data/oracle_address_sample_100_au_streets.csv"
 
 models:
   kraken:

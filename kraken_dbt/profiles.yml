@@ -1,6 +1,0 @@
-kraken:
-  target: dev
-  outputs:
-    dev:
-      type: duckdb
-      path: '../db/kraken.duckdb'  # relative to kraken_dbt/, so resolves to Kraken-Accelerator/db/

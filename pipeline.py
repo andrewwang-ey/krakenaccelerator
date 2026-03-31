@@ -1,17 +1,20 @@
 import subprocess
 from pathlib import Path
+import os
 
 # All paths are relative to Kraken-Accelerator/ (the git repo root)
 repo_root = Path(__file__).parent
 db_dir = repo_root / 'db'
-dbt_dir = repo_root / 'kraken_dbt'
-
 db_dir.mkdir(exist_ok=True)
+
+env = os.environ.copy()
+env['DUCKDB_PATH'] = str(db_dir / 'kraken.duckdb')
 
 result = subprocess.run(
     ['dbt', 'run', '--profiles-dir', '.'],
-    cwd=dbt_dir,
-    capture_output=False
+    cwd=repo_root,
+    capture_output=False,
+    env=env
 )
 
 if result.returncode != 0:
