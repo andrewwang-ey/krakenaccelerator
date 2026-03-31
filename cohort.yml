@@ -1,4 +1,4 @@
-cohort_name: cohort 1
+cohort_name: testing bat system
 filters:
   address_type: SERVICE
   is_primary: Y

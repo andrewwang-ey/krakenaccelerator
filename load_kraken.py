@@ -1,8 +1,14 @@
-import duckdb, requests, json
+import duckdb
+import requests
+import json
+from pathlib import Path
 
-con = duckdb.connect('db/kraken.duckdb')
-rows = con.execute("SELECT * FROM gold.billing_address").fetchall()
+repo_root = Path(__file__).parent
+
+con  = duckdb.connect(str(repo_root / 'db' / 'kraken.duckdb'))
+rows = con.execute("SELECT * FROM gold.gold_output").fetchall()
 cols = [d[0] for d in con.description]
+con.close()
 
 KRAKEN_URL = "https://your-kraken-endpoint/graphql"
 MUTATION = """
@@ -15,19 +21,14 @@ mutation CreateAccount($input: CreateAccountInput!) {
 
 for row in rows:
     record = dict(zip(cols, row))
+
+    # Gold output columns are already named to match the Kraken API field names
+    # so we can pass the record directly as the input payload
     payload = {
         "query": MUTATION,
         "variables": {
-            "input": {
-                "billingAddress": {
-                    "address1": record["address1"],
-                    "address2": record["address2"],  # may be None — Kraken accepts null
-                    "city":     record["city"],
-                    "state":    record["state"],
-                    "zipCode":  record["zipCode"],
-                }
-            }
+            "input": record
         }
     }
     response = requests.post(KRAKEN_URL, json=payload)
-    print(f"{record['PARTY_ID']}: {response.status_code}")
+    print(f"Row {record}: {response.status_code}")

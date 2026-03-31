@@ -1,9 +1,9 @@
 @echo off
 cd /d "%~dp0"
 
-echo ============================================
-echo   Kraken Migration Accelerator — First Time Setup
-echo ============================================
+echo =================================================
+echo   Kraken Migration Accelerator: First Time Setup
+echo =================================================
 echo.
 
 :: Check Python is installed
