@@ -6,4 +6,3 @@ SELECT
     STATE          AS state,
     POSTCODE       AS zipCode
 FROM {{ ref('silver_address') }}
-LIMIT 25;

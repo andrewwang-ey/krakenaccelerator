@@ -23,7 +23,7 @@ SELECT
     END_DATE,
     IS_PRIMARY
 FROM {{ ref('bronze_address') }}
-WHERE ADDRESS_TYPE = 'BILLING'
-  AND IS_PRIMARY   = 'Y'
+WHERE ADDRESS_TYPE = '{{ var("address_type") }}'
+  AND IS_PRIMARY   = '{{ var("is_primary") }}'
   AND END_DATE IS NULL
-  AND STATE IN ('VIC', 'Victoria')
+  AND STATE IN ('{{ var("state") }}')

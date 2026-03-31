@@ -1,0 +1,5 @@
+cohort_name: cohort 1
+filters:
+  address_type: SERVICE
+  is_primary: Y
+  state: NSW

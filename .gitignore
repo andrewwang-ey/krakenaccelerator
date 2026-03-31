@@ -1,5 +1,6 @@
 db/
 *.duckdb
+venv/
 __pycache__/
 .dbt/
 profiles.yml
