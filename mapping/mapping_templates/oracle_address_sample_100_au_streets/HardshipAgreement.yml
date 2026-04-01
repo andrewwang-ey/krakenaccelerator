@@ -1,0 +1,14 @@
+kraken_entity: HardshipAgreement
+required_fields:
+- hardship_entry_reason
+- hardship_type
+- start_date
+column_map:
+  hardship_type: null
+  hardship_details: null
+  hardship_entry_reason: null
+  start_date: START_DATE
+  end_date: END_DATE
+  exit_reason: null
+  exit_reason_details: null
+  payment_plan_details: null

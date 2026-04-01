@@ -1,0 +1,8 @@
+kraken_entity: ContributionSchemePeriod
+required_fields:
+- end_date
+- start_date
+column_map:
+  start_date: START_DATE
+  end_date: END_DATE
+  fulfilled_at: null

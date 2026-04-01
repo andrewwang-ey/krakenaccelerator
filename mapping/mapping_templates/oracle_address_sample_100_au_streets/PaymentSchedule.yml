@@ -1,0 +1,22 @@
+kraken_entity: PaymentSchedule
+required_fields:
+- means
+- start_date
+column_map:
+  amount: null
+  day_of_month: null
+  frequency: null
+  means: null
+  start_date: START_DATE
+  end_date: END_DATE
+  is_debt_repayment_plan: null
+  debt_repayment_element: null
+  debt_repayment_end_date: null
+  trigger: null
+  balance_threshold: null
+  ledger_code: null
+  paid_by: null
+  exempt_from_payment_adequacy: null
+  instalments: null
+  delay_strategy: null
+  delay_days: null

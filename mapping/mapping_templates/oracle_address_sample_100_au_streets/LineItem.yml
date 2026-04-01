@@ -1,0 +1,18 @@
+kraken_entity: LineItem
+required_fields:
+- end_date
+- net_amount
+- number_of_units
+- start_date
+column_map:
+  rate_band: null
+  rate_specification_code: null
+  time_series_specification_code: null
+  start_date: START_DATE
+  end_date: END_DATE
+  number_of_units: null
+  net_amount: null
+  price_per_unit: null
+  units: null
+  params: null
+  external_rate_identifier: null

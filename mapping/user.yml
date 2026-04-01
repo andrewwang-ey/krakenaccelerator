@@ -1,0 +1,39 @@
+# mapping/address.yml
+# Defines how the client's CSV maps to Kraken's BillingAddressInput API.
+# One mapping file per entity type. Add new files for accounts, meters, etc.
+
+kraken_entity: UserInput
+
+# Fields that must not be null — rows missing these go to bronze_rejected
+required_fields:
+  - ADDRESS_LINE_1
+  - CITY
+  - STATE
+  - POSTCODE
+
+# Maps Kraken API field name → client's CSV column name
+column_map:
+  address1: ADDRESS_LINE_1
+  address2: ADDRESS_LINE_2
+  city:     CITY
+  state:    STATE
+  zipCode:  POSTCODE
+
+# Optional: transform values in specific columns before loading
+transformations:
+  STATE:
+    type: value_map
+    values:
+      Victoria:                     VIC
+      New South Wales:              NSW
+      Queensland:                   QLD
+      South Australia:              SA
+      Western Australia:            WA
+      Tasmania:                     TAS
+      Northern Territory:           NT
+      Australian Capital Territory: ACT
+
+# Optional: filter out inactive/expired records
+active_record_filter:
+  field:     END_DATE
+  condition: "IS NULL"

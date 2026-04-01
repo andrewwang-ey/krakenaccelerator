@@ -1,3 +1,6 @@
-cohort_name: cohort 4 testsetset
+cohort_name: 'Cohort 2: test'
 filters:
-  STATE: NSW
+  ADDRESS_TYPE: POSTAL
+  CITY: Melbourne
+  IS_PRIMARY: Y
+  STATE: VIC

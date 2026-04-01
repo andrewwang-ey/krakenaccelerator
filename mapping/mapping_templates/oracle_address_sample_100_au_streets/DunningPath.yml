@@ -1,0 +1,6 @@
+kraken_entity: DunningPath
+required_fields:
+- path_name
+column_map:
+  path_name: null
+  start_date: START_DATE

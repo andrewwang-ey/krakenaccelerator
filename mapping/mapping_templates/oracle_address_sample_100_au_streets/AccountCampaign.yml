@@ -1,0 +1,8 @@
+kraken_entity: AccountCampaign
+required_fields: []
+column_map:
+  campaign_name: null
+  slug: null
+  campaign_note: null
+  start_date: START_DATE
+  expiry_date: null

@@ -1,0 +1,17 @@
+kraken_entity: CommonStructuredAddress
+required_fields: []
+column_map:
+  flat_or_unit_type: null
+  flat_or_unit_number: null
+  floor_or_level_type: null
+  floor_or_level_number: null
+  building_or_property_name: null
+  location_descriptor: null
+  house: null
+  lot_number: null
+  street: null
+  suburb_or_place_or_locality: null
+  state_or_territory: null
+  postcode: POSTCODE
+  delivery_point_identifier: null
+  melway_grid_reference: null

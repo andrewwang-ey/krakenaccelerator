@@ -1,6 +1,7 @@
 import subprocess
 import json
 import os
+import sys
 from pathlib import Path
 from datetime import datetime
 
@@ -8,12 +9,13 @@ import yaml
 import duckdb
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
-repo_root   = Path(__file__).parent
-db_dir      = repo_root / 'db'
-db_path     = db_dir / 'kraken.duckdb'
-cohort_cfg  = repo_root / 'cohort.yml'
-data_dir    = repo_root / 'data'
-mapping_dir = repo_root / 'mapping'
+repo_root        = Path(__file__).parent
+db_dir           = repo_root / 'db'
+db_path          = db_dir / 'kraken.duckdb'
+cohort_cfg       = repo_root / 'cohort.yml'
+data_dir         = repo_root / 'data'
+mapping_dir      = repo_root / 'mapping'
+templates_dir    = mapping_dir / 'mapping_templates'
 
 db_dir.mkdir(exist_ok=True)
 
@@ -95,14 +97,25 @@ def prompt_choice(field, options):
         print(f"  Please enter a number between 1 and {len(options) + 1}")
 
 
-# ── Step 1: Pick mapping and CSV ──────────────────────────────────────────────
+# ── Step 1: Pick CSV, then load its matching mapping templates ───────────────
 print("=" * 50)
 print("  Kraken Migration — Cohort Builder")
 print("=" * 50)
 print()
 
-mapping_file = pick_file(mapping_dir, 'yml', 'Mapping')
-csv_path     = pick_file(data_dir,    'csv', 'CSV file')
+csv_path     = pick_file(data_dir, 'csv', 'CSV file')
+
+# Look for mapping templates generated for this specific CSV
+csv_template_dir = templates_dir / csv_path.stem
+if not csv_template_dir.exists() or not list(csv_template_dir.glob('*.yml')):
+    raise SystemExit(
+        f"ERROR: No mapping templates found for '{csv_path.name}'.\n"
+        f"Please run generate_mappings.py first to generate templates in:\n"
+        f"  {csv_template_dir}"
+    )
+
+print(f"Mapping templates found for: {csv_path.name}")
+mapping_file = pick_file(csv_template_dir, 'yml', 'Entity mapping')
 
 with open(mapping_file) as f:
     mapping = yaml.safe_load(f)
@@ -192,8 +205,13 @@ dbt_vars = json.dumps({
     "active_record_filter":  active_record_filter,
 })
 
+# Use the dbt executable from the same virtual environment as this Python interpreter.
+dbt_executable = Path(sys.executable).parent / ("dbt.exe" if os.name == "nt" else "dbt")
+if not dbt_executable.exists():
+    dbt_executable = Path("dbt")
+
 result = subprocess.run(
-    ['dbt', 'run', '--profiles-dir', '.', '--vars', dbt_vars],
+    [str(dbt_executable), 'run', '--profiles-dir', '.', '--vars', dbt_vars],
     cwd=repo_root,
     capture_output=False,
     env=env

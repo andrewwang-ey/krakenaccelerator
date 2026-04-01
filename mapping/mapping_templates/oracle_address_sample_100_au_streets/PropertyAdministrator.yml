@@ -1,0 +1,22 @@
+kraken_entity: PropertyAdministrator
+required_fields: []
+column_map:
+  given_name: null
+  family_name: null
+  email: null
+  mobile: null
+  landline: null
+  role: null
+  effective_from: null
+  effective_to: null
+  billing_name: null
+  date_of_birth: null
+  title: null
+  salutation: null
+  deceased: null
+  address1: null
+  address2: null
+  address3: null
+  address4: null
+  address5: null
+  postcode: POSTCODE

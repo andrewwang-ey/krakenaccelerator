@@ -1,0 +1,6 @@
+kraken_entity: EffectivePeriod
+required_fields:
+- start_date
+column_map:
+  start_date: START_DATE
+  end_date: END_DATE
