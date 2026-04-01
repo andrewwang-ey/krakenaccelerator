@@ -1,6 +1,2 @@
-cohort_name: 'Cohort 2: test'
-filters:
-  ADDRESS_TYPE: POSTAL
-  CITY: Melbourne
-  IS_PRIMARY: Y
-  STATE: VIC
+cohort_name: cohort powerBI
+filters: {}

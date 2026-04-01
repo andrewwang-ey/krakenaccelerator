@@ -1,5 +1,5 @@
 # Valid filter values
-_Generated from `data/oracle_user_sample.csv` on 2026-03-31 16:13_
+_Generated from `data/oracle_address_sample_100_au_streets.csv` on 2026-04-01 15:11_
 
 ## ADDRESS_TYPE
 - `BILLING` (36 records)
@@ -7,18 +7,20 @@ _Generated from `data/oracle_user_sample.csv` on 2026-03-31 16:13_
 - `SERVICE` (30 records)
 
 ## CITY
-- `Adelaide` (26 records)
+- `Adelaide` (25 records)
 - `Brisbane` (17 records)
 - `Melbourne` (20 records)
 - `Perth` (17 records)
 - `Sydney` (20 records)
+- `None` (1 records)
 
 ## STATE
-- `NSW` (20 records)
+- `NSW` (19 records)
 - `QLD` (17 records)
-- `SA` (26 records)
+- `SA` (25 records)
 - `VIC` (20 records)
 - `WA` (17 records)
+- `None` (2 records)
 
 ## IS_PRIMARY
 - `N` (3 records)

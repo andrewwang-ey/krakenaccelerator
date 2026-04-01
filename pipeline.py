@@ -17,7 +17,10 @@ data_dir         = repo_root / 'data'
 mapping_dir      = repo_root / 'mapping'
 templates_dir    = mapping_dir / 'mapping_templates'
 
+powerbi_dir = repo_root / 'powerbi'
+
 db_dir.mkdir(exist_ok=True)
+powerbi_dir.mkdir(exist_ok=True)
 
 
 # ── Helper: pick a file from a folder ────────────────────────────────────────
@@ -232,7 +235,9 @@ cohort_schema = """
         csv_file      VARCHAR,
         mapping_file  VARCHAR,
         filters       VARCHAR,
+        rows_read     INTEGER,
         rows_loaded   INTEGER,
+        rows_rejected INTEGER,
         run_at        TIMESTAMP
     )
 """
@@ -247,27 +252,51 @@ if table_exists:
         SELECT COUNT(*) FROM information_schema.columns
         WHERE table_name = 'cohort_history'
     """).fetchone()[0]
-    if col_count != 8:
+    if col_count != 10:
         con.execute("DROP TABLE cohort_history")
         con.execute(cohort_schema)
 else:
     con.execute(cohort_schema)
 
-rows_loaded = con.execute(
-    "SELECT COUNT(*) FROM gold.gold_output"
-).fetchone()[0]
+rows_loaded   = con.execute("SELECT COUNT(*) FROM gold.gold_output").fetchone()[0]
+rows_rejected = con.execute("SELECT COUNT(*) FROM bronze.bronze_data_rejected").fetchone()[0]
+rows_read     = rows_loaded + rows_rejected
 
 next_id = con.execute(
     "SELECT COALESCE(MAX(run_id), 0) + 1 FROM cohort_history"
 ).fetchone()[0]
 
 con.execute(
-    "INSERT INTO cohort_history VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+    "INSERT INTO cohort_history VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
     [next_id, cohort_name, kraken_entity, csv_path.name,
-     mapping_file.name, json.dumps(filters), rows_loaded, datetime.now()]
+     mapping_file.name, json.dumps(filters), rows_read, rows_loaded, rows_rejected, datetime.now()]
 )
 
 con.close()
 
-print(f"\nPipeline complete — {rows_loaded} rows loaded into gold layer")
+print(f"\nPipeline complete — {rows_loaded} rows loaded, {rows_rejected} rejected, {rows_read} total read")
 print(f"Run #{next_id} logged to cohort_history in db/kraken.duckdb")
+
+
+# ── Step 9: Export tables to CSV for Power BI ─────────────────────────────────
+print("\nExporting tables for Power BI...")
+
+export_con = duckdb.connect(str(db_path))
+
+export_tables = {
+    'cohort_history':      'SELECT * FROM cohort_history',
+    'bronze_data':         'SELECT * FROM bronze.bronze_data',
+    'bronze_data_rejected':'SELECT * FROM bronze.bronze_data_rejected',
+    'gold_output':         'SELECT * FROM gold.gold_output',
+}
+
+for table_name, query in export_tables.items():
+    out_path = str(powerbi_dir / f'{table_name}.csv').replace('\\', '/')
+    try:
+        export_con.execute(f"COPY ({query}) TO '{out_path}' (FORMAT CSV, HEADER TRUE)")
+        print(f"  ✓ powerbi/{table_name}.csv")
+    except Exception as e:
+        print(f"  ✗ {table_name} export failed: {e}")
+
+export_con.close()
+print(f"\nPower BI CSVs written to: powerbi/")

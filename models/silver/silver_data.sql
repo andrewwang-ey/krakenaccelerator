@@ -1,6 +1,6 @@
 {% set col_map    = var('column_map') %}
 {% set transforms = var('transformations', {}) %}
-{% set source_cols = col_map.values() | list %}
+{% set source_cols = col_map.values() | select('ne', None) | list %}
 
 SELECT
 {%- if source_cols %}
