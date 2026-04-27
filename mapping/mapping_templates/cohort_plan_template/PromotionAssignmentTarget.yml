@@ -1,0 +1,11 @@
+kraken_entity: PromotionAssignmentTarget
+required_fields:
+- identifier
+- target_type
+column_map:
+  target_type:
+    source_column: target_rows
+    confidence: 0.194
+  identifier:
+    source_column: target_rows
+    confidence: 0.088

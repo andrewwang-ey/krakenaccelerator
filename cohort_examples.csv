@@ -1,0 +1,11 @@
+cohort_id,name,priority,description,notes,STATE,ADDRESS_TYPE,IS_PRIMARY
+1,Cohort 6: Western Australia — Service Addresses,1,Service addresses in Western Australia for energy distribution validation.,Depends on Cohort 1 completion,WA,SERVICE,
+2,Cohort 7: Queensland — All Types,2,All address types in Queensland including billing and service.,High priority for QLD market expansion.,QLD,,
+3,Cohort 8: Primary Addresses — All States,3,All primary addresses across all states for core customer data.,Critical for primary record validation.,,,Y
+4,Cohort 9: South Australia — Billing Only,4,Billing addresses specifically in South Australia.,Follows SA regulatory requirements.,SA,BILLING,
+5,Cohort 10: Victoria and NSW Combined,5,Combined billing and service addresses in Victoria and NSW.,Large cohort for major markets.,"VIC,NSW",,
+6,Cohort 11: Non-Primary Records,6,All non-primary addresses for supplementary data processing.,Lower priority,,,
+7,Cohort 12: Perth Metro Area,7,Addresses in Perth metropolitan area (WA state).,Geographic segmentation test.,WA,,
+8,Cohort 13: Postal Addresses Only,8,All postal address types across all states.,Special handling required for postal.,,POSTAL,
+9,Cohort 14: Eastern States — Primary,9,Primary addresses in eastern states (NSW, QLD).,22000,,"NSW,VIC,QLD"
+10,Cohort 15: Small Test Cohort,10,Small subset for testing and validation purposes.,Use for QA testing before full deployment.,VIC,BILLING,Y

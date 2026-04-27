@@ -1,0 +1,36 @@
+kraken_entity: AusRichSupplyAddress
+required_fields:
+- customer_at_supply_address_from_date
+- meter_points
+- supply_address
+column_map:
+  meter_points:
+    source_column: null
+    confidence: 0.007
+  life_support:
+    source_column: null
+    confidence: 0.012
+  embedded_network_code:
+    source_column: name
+    confidence: 0.075
+  label:
+    source_column: ADDRESS_TYPE
+    confidence: 0.091
+  property_administrators:
+    source_column: null
+    confidence: 0.034
+  primary_place_of_residence_since:
+    source_column: IS_PRIMARY
+    confidence: 0.214
+  is_landlord:
+    source_column: null
+    confidence: 0.046
+  customer_at_supply_address_from_date:
+    source_column: ADDRESS_TYPE
+    confidence: 0.102
+  customer_at_supply_address_to_date:
+    source_column: ADDRESS_TYPE
+    confidence: 0.088
+  supply_address:
+    source_column: ADDRESS_TYPE
+    confidence: 0.182

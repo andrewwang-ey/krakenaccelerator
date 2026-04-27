@@ -1,0 +1,12 @@
+kraken_entity: CommonStreet
+required_fields: []
+column_map:
+  street_name:
+    source_column: name
+    confidence: 0.405
+  street_type:
+    source_column: ADDRESS_TYPE
+    confidence: 0.054
+  street_suffix:
+    source_column: null
+    confidence: 0.003

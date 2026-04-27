@@ -1,0 +1,41 @@
+kraken_entity: AusPropertyRichAddress
+required_fields:
+- administrative_area
+- country
+- locality
+- postal_code
+- structured_street_address
+column_map:
+  name:
+    source_column: name
+    confidence: 0.494
+  organization:
+    source_column: ADDRESS_TYPE
+    confidence: 0.079
+  street_address:
+    source_column: ADDRESS_TYPE
+    confidence: 0.096
+  structured_street_address:
+    source_column: ADDRESS_TYPE
+    confidence: 0.068
+  dependent_locality:
+    source_column: null
+    confidence: 0.042
+  locality:
+    source_column: null
+    confidence: 0.007
+  administrative_area:
+    source_column: STATE
+    confidence: 0.181
+  postal_code:
+    source_column: null
+    confidence: 0.0
+  sorting_code:
+    source_column: null
+    confidence: 0.027
+  country:
+    source_column: null
+    confidence: 0.05
+  delivery_point_identifier:
+    source_column: ADDRESS_TYPE
+    confidence: 0.053

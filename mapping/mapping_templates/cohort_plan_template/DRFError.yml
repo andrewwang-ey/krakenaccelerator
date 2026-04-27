@@ -1,0 +1,6 @@
+kraken_entity: DRFError
+required_fields: []
+column_map:
+  field_name:
+    source_column: name
+    confidence: 0.247

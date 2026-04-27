@@ -1,0 +1,25 @@
+kraken_entity: ElectricitySupplyDetail
+required_fields:
+- start_at
+column_map:
+  agreed_capacity_kva:
+    source_column: null
+    confidence: 0.0
+  estimated_annual_consumption_kwh:
+    source_column: null
+    confidence: 0.0
+  equipment_capacity_kw:
+    source_column: null
+    confidence: 0.0
+  number_of_connections:
+    source_column: null
+    confidence: 0.0
+  asset_tariff_category:
+    source_column: null
+    confidence: 0.012
+  start_at:
+    source_column: START_DATE
+    confidence: 0.227
+  end_at:
+    source_column: END_DATE
+    confidence: 0.511

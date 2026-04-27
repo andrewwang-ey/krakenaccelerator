@@ -6,7 +6,7 @@ from pathlib import Path
 repo_root = Path(__file__).parent
 
 con  = duckdb.connect(str(repo_root / 'db' / 'kraken.duckdb'))
-rows = con.execute("SELECT * FROM gold.gold_output").fetchall()
+rows = con.execute("SELECT * FROM output.output_data").fetchall()
 cols = [d[0] for d in con.description]
 con.close()
 

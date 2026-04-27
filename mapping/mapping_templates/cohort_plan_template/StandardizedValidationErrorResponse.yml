@@ -1,0 +1,15 @@
+kraken_entity: StandardizedValidationErrorResponse
+required_fields:
+- code
+- detail
+- errors
+column_map:
+  detail:
+    source_column: description
+    confidence: 0.39
+  code:
+    source_column: null
+    confidence: 0.012
+  errors:
+    source_column: null
+    confidence: 0.002

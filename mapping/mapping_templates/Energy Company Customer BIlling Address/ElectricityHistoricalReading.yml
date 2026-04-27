@@ -1,0 +1,28 @@
+kraken_entity: ElectricityHistoricalReading
+required_fields:
+- billed
+- reading_date
+- reading_type
+- reading_value
+column_map:
+  register_id:
+    source_column: ADDRESS_ID
+    confidence: 0.068
+  reading_date:
+    source_column: END_DATE
+    confidence: 0.147
+  reading_type:
+    source_column: null
+    confidence: 0.035
+  reading_value:
+    source_column: null
+    confidence: 0.0
+  estimated_reason_code:
+    source_column: null
+    confidence: 0.024
+  billed:
+    source_column: null
+    confidence: 0.0
+  validation_status:
+    source_column: null
+    confidence: 0.0

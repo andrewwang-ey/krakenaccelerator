@@ -1,2 +1,4 @@
-cohort_name: cohort powerBI
-filters: {}
+cohort_name: 'Cohort 9: Postal SA'
+filters:
+  ADDRESS_TYPE: POSTAL
+  STATE: SA

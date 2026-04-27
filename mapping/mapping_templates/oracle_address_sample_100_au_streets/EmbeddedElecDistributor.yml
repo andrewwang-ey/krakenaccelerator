@@ -1,0 +1,14 @@
+kraken_entity: EmbeddedElecDistributor
+required_fields:
+- from_date
+- lnsp_id
+column_map:
+  from_date:
+    source_column: END_DATE
+    confidence: 0.102
+  to_date:
+    source_column: END_DATE
+    confidence: 0.107
+  lnsp_id:
+    source_column: ADDRESS_ID
+    confidence: 0.067

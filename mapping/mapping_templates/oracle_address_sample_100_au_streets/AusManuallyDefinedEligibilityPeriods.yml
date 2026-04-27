@@ -1,0 +1,15 @@
+kraken_entity: AusManuallyDefinedEligibilityPeriods
+required_fields:
+- eligibility_type
+- end_at
+- start_at
+column_map:
+  start_at:
+    source_column: START_DATE
+    confidence: 0.189
+  end_at:
+    source_column: END_DATE
+    confidence: 0.305
+  eligibility_type:
+    source_column: STATE
+    confidence: 0.067

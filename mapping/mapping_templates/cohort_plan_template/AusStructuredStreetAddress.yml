@@ -1,0 +1,57 @@
+kraken_entity: AusStructuredStreetAddress
+required_fields: []
+column_map:
+  flat_or_unit_type:
+    source_column: ADDRESS_TYPE
+    confidence: 0.056
+  flat_or_unit_number:
+    source_column: null
+    confidence: 0.02
+  floor_or_level_type:
+    source_column: null
+    confidence: 0.049
+  floor_or_level_number:
+    source_column: null
+    confidence: 0.02
+  building_or_property_name:
+    source_column: name
+    confidence: 0.146
+  location_descriptor:
+    source_column: description
+    confidence: 0.29
+  house_number_1:
+    source_column: null
+    confidence: 0.016
+  house_number_suffix_1:
+    source_column: null
+    confidence: 0.014
+  house_number_2:
+    source_column: null
+    confidence: 0.016
+  house_number_suffix_2:
+    source_column: null
+    confidence: 0.013
+  lot_number:
+    source_column: null
+    confidence: 0.018
+  street_name:
+    source_column: name
+    confidence: 0.405
+  street_type:
+    source_column: ADDRESS_TYPE
+    confidence: 0.054
+  street_suffix:
+    source_column: null
+    confidence: 0.003
+  postal_delivery_type:
+    source_column: null
+    confidence: 0.047
+  postal_delivery_number_prefix:
+    source_column: null
+    confidence: 0.011
+  postal_delivery_number_value:
+    source_column: null
+    confidence: 0.012
+  postal_delivery_number_suffix:
+    source_column: null
+    confidence: 0.011

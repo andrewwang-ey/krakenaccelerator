@@ -4,11 +4,27 @@ required_fields:
 - hardship_type
 - start_date
 column_map:
-  hardship_type: null
-  hardship_details: null
-  hardship_entry_reason: null
-  start_date: START_DATE
-  end_date: END_DATE
-  exit_reason: null
-  exit_reason_details: null
-  payment_plan_details: null
+  hardship_type:
+    source_column: null
+    confidence: 0.027
+  hardship_details:
+    source_column: null
+    confidence: 0.0
+  hardship_entry_reason:
+    source_column: null
+    confidence: 0.0
+  start_date:
+    source_column: START_DATE
+    confidence: 0.149
+  end_date:
+    source_column: END_DATE
+    confidence: 0.398
+  exit_reason:
+    source_column: null
+    confidence: 0.0
+  exit_reason_details:
+    source_column: null
+    confidence: 0.02
+  payment_plan_details:
+    source_column: null
+    confidence: 0.0

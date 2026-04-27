@@ -1,0 +1,44 @@
+kraken_entity: Complaint
+required_fields:
+- complainant_email
+- complainant_name
+- complaint_contacts
+- created_at
+- has_chsr_letter_been_sent
+- has_eight_week_letter_been_sent
+- subtype_of_complaint
+- type_of_complaint
+column_map:
+  created_at:
+    source_column: null
+    confidence: 0.004
+  type_of_complaint:
+    source_column: ADDRESS_TYPE
+    confidence: 0.114
+  subtype_of_complaint:
+    source_column: null
+    confidence: 0.007
+  official_reference_number:
+    source_column: null
+    confidence: 0.022
+  official_entity:
+    source_column: null
+    confidence: 0.023
+  official_status:
+    source_column: null
+    confidence: 0.024
+  complainant_name:
+    source_column: name
+    confidence: 0.23
+  complainant_email:
+    source_column: ADDRESS_TYPE
+    confidence: 0.093
+  has_chsr_letter_been_sent:
+    source_column: null
+    confidence: 0.004
+  has_eight_week_letter_been_sent:
+    source_column: null
+    confidence: 0.004
+  complaint_contacts:
+    source_column: null
+    confidence: 0.022

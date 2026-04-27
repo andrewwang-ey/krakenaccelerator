@@ -1,0 +1,48 @@
+kraken_entity: PaymentAdequacyChange
+required_fields:
+- average_monthly_charge
+- average_monthly_elec_charge
+- average_monthly_gas_charge
+- balance_adjustment
+- created_at
+- current_balance
+- existing_direct_debit_payment
+- new_direct_debit
+- target_balance
+column_map:
+  new_direct_debit:
+    source_column: null
+    confidence: 0.002
+  existing_direct_debit_payment:
+    source_column: null
+    confidence: 0.004
+  current_balance:
+    source_column: null
+    confidence: 0.026
+  target_balance:
+    source_column: target_rows
+    confidence: 0.19
+  balance_adjustment:
+    source_column: target_rows
+    confidence: 0.063
+  average_monthly_charge:
+    source_column: null
+    confidence: 0.011
+  average_monthly_elec_charge:
+    source_column: null
+    confidence: 0.01
+  average_monthly_gas_charge:
+    source_column: null
+    confidence: 0.01
+  applied_at:
+    source_column: null
+    confidence: 0.012
+  should_not_be_applied_reason:
+    source_column: null
+    confidence: 0.008
+  created_at:
+    source_column: null
+    confidence: 0.004
+  ledger:
+    source_column: null
+    confidence: 0.012

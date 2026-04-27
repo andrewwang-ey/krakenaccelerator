@@ -1,0 +1,55 @@
+kraken_entity: BusinessUser
+required_fields:
+- business_roles
+column_map:
+  alternative_phone_numbers:
+    source_column: null
+    confidence: 0.004
+  given_name:
+    source_column: name
+    confidence: 0.382
+  family_name:
+    source_column: name
+    confidence: 0.376
+  email:
+    source_column: ADDRESS_TYPE
+    confidence: 0.073
+  mobile:
+    source_column: null
+    confidence: 0.011
+  landline:
+    source_column: null
+    confidence: 0.012
+  date_of_birth:
+    source_column: null
+    confidence: 0.006
+  label:
+    source_column: cohort_id
+    confidence: 0.055
+  title:
+    source_column: null
+    confidence: 0.003
+  salutation:
+    source_column: null
+    confidence: 0.003
+  deceased:
+    source_column: null
+    confidence: 0.023
+  unable_to_read_meters:
+    source_column: null
+    confidence: 0.02
+  credit_score:
+    source_column: null
+    confidence: 0.0
+  credit_risk_bracket:
+    source_column: null
+    confidence: 0.019
+  details:
+    source_column: null
+    confidence: 0.037
+  user_details:
+    source_column: null
+    confidence: 0.037
+  business_roles:
+    source_column: null
+    confidence: 0.008

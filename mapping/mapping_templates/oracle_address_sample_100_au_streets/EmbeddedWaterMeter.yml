@@ -1,0 +1,57 @@
+kraken_entity: EmbeddedWaterMeter
+required_fields:
+- installed_on
+- location
+- meter_measurement_unit
+- meter_serial_number
+- number_of_dials_on_device
+- read_method
+column_map:
+  meter_serial_number:
+    source_column: null
+    confidence: 0.0
+  installed_on:
+    source_column: END_DATE
+    confidence: 0.061
+  read_method:
+    source_column: null
+    confidence: 0.0
+  number_of_dials_on_device:
+    source_column: null
+    confidence: 0.0
+  location:
+    source_column: null
+    confidence: 0.0
+  meter_measurement_unit:
+    source_column: null
+    confidence: 0.0
+  removed_on:
+    source_column: END_DATE
+    confidence: 0.063
+  make_and_model:
+    source_column: null
+    confidence: 0.0
+  construction_date:
+    source_column: END_DATE
+    confidence: 0.094
+  reading_route_sequence:
+    source_column: null
+    confidence: 0.0
+  access_details:
+    source_column: null
+    confidence: 0.0
+  key_details:
+    source_column: null
+    confidence: 0.0
+  connection_periods:
+    source_column: null
+    confidence: 0.0
+  last_billed_to_date:
+    source_column: END_DATE
+    confidence: 0.083
+  transfer_readings:
+    source_column: null
+    confidence: 0.0
+  reading_history:
+    source_column: null
+    confidence: 0.026

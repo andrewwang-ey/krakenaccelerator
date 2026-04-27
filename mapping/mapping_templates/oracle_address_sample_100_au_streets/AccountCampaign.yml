@@ -1,8 +1,18 @@
 kraken_entity: AccountCampaign
 required_fields: []
 column_map:
-  campaign_name: null
-  slug: null
-  campaign_note: null
-  start_date: START_DATE
-  expiry_date: null
+  campaign_name:
+    source_column: null
+    confidence: 0.017
+  slug:
+    source_column: null
+    confidence: 0.017
+  campaign_note:
+    source_column: null
+    confidence: 0.0
+  start_date:
+    source_column: START_DATE
+    confidence: 0.18
+  expiry_date:
+    source_column: END_DATE
+    confidence: 0.282

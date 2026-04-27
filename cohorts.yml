@@ -1,0 +1,16 @@
+plan_version: 1
+dataset: ''
+mapping: ''
+created_at: '2026-04-21T15:06:38.411290'
+updated_at: '2026-04-21T15:11:40.619206'
+cohorts:
+- cohort_id: 1
+  name: 'cohort 3: test'
+  version: 1
+  description: ''
+  priority: 1
+  status: pending
+  filters: []
+  estimated_rows: null
+  target_rows: null
+  notes: ''

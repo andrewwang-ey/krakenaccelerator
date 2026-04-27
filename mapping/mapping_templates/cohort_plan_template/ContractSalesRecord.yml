@@ -1,0 +1,9 @@
+kraken_entity: ContractSalesRecord
+required_fields: []
+column_map:
+  affiliate_organisation_name:
+    source_column: name
+    confidence: 0.248
+  sales_channel:
+    source_column: null
+    confidence: 0.002

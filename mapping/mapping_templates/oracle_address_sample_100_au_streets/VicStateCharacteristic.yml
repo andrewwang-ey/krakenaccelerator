@@ -1,0 +1,11 @@
+kraken_entity: VicStateCharacteristic
+required_fields:
+- code
+- value
+column_map:
+  code:
+    source_column: COUNTRY_CODE
+    confidence: 0.075
+  value:
+    source_column: STATE
+    confidence: 0.434

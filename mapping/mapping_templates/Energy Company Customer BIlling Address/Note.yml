@@ -1,0 +1,24 @@
+kraken_entity: Note
+required_fields: []
+column_map:
+  created_at:
+    source_column: CREATED_DATE
+    confidence: 0.149
+  body:
+    source_column: null
+    confidence: 0.048
+  document_paths:
+    source_column: null
+    confidence: 0.0
+  is_pinned:
+    source_column: null
+    confidence: 0.022
+  is_archived:
+    source_column: null
+    confidence: 0.023
+  unpin_at:
+    source_column: null
+    confidence: 0.029
+  external_id:
+    source_column: ADDRESS_ID
+    confidence: 0.08

@@ -1,0 +1,30 @@
+kraken_entity: BusinessWithExistingContracts
+required_fields: []
+column_map:
+  company_name:
+    source_column: name
+    confidence: 0.341
+  business_type:
+    source_column: ADDRESS_TYPE
+    confidence: 0.052
+  company_number:
+    source_column: null
+    confidence: 0.04
+  details:
+    source_column: null
+    confidence: 0.028
+  segment_name:
+    source_column: name
+    confidence: 0.157
+  users:
+    source_column: null
+    confidence: 0.006
+  portfolios:
+    source_column: null
+    confidence: 0.008
+  business_contract_identifier:
+    source_column: null
+    confidence: 0.014
+  business_contract_identifiers:
+    source_column: null
+    confidence: 0.012

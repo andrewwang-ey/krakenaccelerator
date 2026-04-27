@@ -1,0 +1,12 @@
+kraken_entity: LatestError
+required_fields: []
+column_map:
+  code:
+    source_column: null
+    confidence: 0.05
+  detail:
+    source_column: description
+    confidence: 0.258
+  domain:
+    source_column: null
+    confidence: 0.015

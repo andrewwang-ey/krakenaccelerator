@@ -1,0 +1,11 @@
+kraken_entity: IndexationOption
+required_fields:
+- escalation_start_date
+- index_code
+column_map:
+  index_code:
+    source_column: COUNTRY_CODE
+    confidence: 0.06
+  escalation_start_date:
+    source_column: START_DATE
+    confidence: 0.173

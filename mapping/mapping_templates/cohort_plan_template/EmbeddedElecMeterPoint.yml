@@ -1,0 +1,97 @@
+kraken_entity: EmbeddedElecMeterPoint
+required_fields:
+- customer_classification
+- customer_threshold
+- distributors
+- meter_data_providers
+- meters
+- mpxn
+- nmi_classification
+- nmi_status_periods
+- parent_nmi
+- supply_start_date
+column_map:
+  identifier:
+    source_column: null
+    confidence: 0.026
+  supply_type:
+    source_column: ADDRESS_TYPE
+    confidence: 0.058
+  supply_start_date:
+    source_column: null
+    confidence: 0.003
+  supply_end_date:
+    source_column: null
+    confidence: 0.003
+  agreements:
+    source_column: null
+    confidence: 0.009
+  last_billed_to_date:
+    source_column: null
+    confidence: 0.024
+  mpxn:
+    source_column: null
+    confidence: 0.021
+  address:
+    source_column: ADDRESS_TYPE
+    confidence: 0.193
+  multiplier:
+    source_column: null
+    confidence: 0.0
+  access_details:
+    source_column: null
+    confidence: 0.004
+  hazard_details:
+    source_column: null
+    confidence: 0.025
+  dog_code:
+    source_column: null
+    confidence: 0.0
+  meter_position:
+    source_column: null
+    confidence: 0.0
+  sensitive_load:
+    source_column: null
+    confidence: 0.02
+  next_scheduled_read_date:
+    source_column: null
+    confidence: 0.002
+  nmi_classification:
+    source_column: null
+    confidence: 0.0
+  customer_classification:
+    source_column: null
+    confidence: 0.0
+  customer_threshold:
+    source_column: null
+    confidence: 0.0
+  distribution_loss_factor_code:
+    source_column: null
+    confidence: 0.02
+  jurisdiction:
+    source_column: null
+    confidence: 0.0
+  parent_nmi:
+    source_column: null
+    confidence: 0.007
+  shared_isolation_flag:
+    source_column: null
+    confidence: 0.012
+  outage_contact_email:
+    source_column: null
+    confidence: 0.002
+  outage_contact_phone:
+    source_column: null
+    confidence: 0.008
+  meters:
+    source_column: null
+    confidence: 0.017
+  nmi_status_periods:
+    source_column: null
+    confidence: 0.002
+  meter_data_providers:
+    source_column: null
+    confidence: 0.002
+  distributors:
+    source_column: null
+    confidence: 0.003

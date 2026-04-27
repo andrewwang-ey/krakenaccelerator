@@ -1,0 +1,25 @@
+kraken_entity: LatePaymentFees
+required_fields:
+- flat_fee_amount
+- percentage_fee
+- percentage_interval_days
+- term_type
+column_map:
+  term_type:
+    source_column: ADDRESS_TYPE
+    confidence: 0.132
+  is_variable:
+    source_column: null
+    confidence: 0.042
+  flat_fee_amount:
+    source_column: null
+    confidence: 0.026
+  percentage_fee:
+    source_column: null
+    confidence: 0.006
+  percentage_interval_days:
+    source_column: null
+    confidence: 0.008
+  interest_policy_name:
+    source_column: name
+    confidence: 0.121

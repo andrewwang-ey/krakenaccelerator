@@ -1,0 +1,23 @@
+kraken_entity: ContractedVolumePeriod
+required_fields:
+- market_name
+- unit
+- valid_from_date
+- valid_to_date
+- value
+column_map:
+  value:
+    source_column: null
+    confidence: 0.008
+  unit:
+    source_column: null
+    confidence: 0.008
+  market_name:
+    source_column: name
+    confidence: 0.195
+  valid_from_date:
+    source_column: null
+    confidence: 0.03
+  valid_to_date:
+    source_column: null
+    confidence: 0.03

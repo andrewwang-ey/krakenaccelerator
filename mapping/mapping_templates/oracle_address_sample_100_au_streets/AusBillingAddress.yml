@@ -1,0 +1,37 @@
+kraken_entity: AusBillingAddress
+required_fields:
+- country
+column_map:
+  name:
+    source_column: null
+    confidence: 0.0
+  organization:
+    source_column: ADDRESS_LINE_2
+    confidence: 0.084
+  street_address:
+    source_column: ADDRESS_LINE_2
+    confidence: 0.102
+  structured_street_address:
+    source_column: ADDRESS_LINE_2
+    confidence: 0.072
+  dependent_locality:
+    source_column: ADDRESS_TYPE
+    confidence: 0.057
+  locality:
+    source_column: CITY
+    confidence: 0.083
+  administrative_area:
+    source_column: STATE
+    confidence: 0.06
+  postal_code:
+    source_column: null
+    confidence: 0.046
+  sorting_code:
+    source_column: null
+    confidence: 0.035
+  country:
+    source_column: COUNTRY_CODE
+    confidence: 0.218
+  delivery_point_identifier:
+    source_column: ADDRESS_ID
+    confidence: 0.104

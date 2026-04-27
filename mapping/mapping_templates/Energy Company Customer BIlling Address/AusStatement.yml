@@ -1,0 +1,51 @@
+kraken_entity: AusStatement
+required_fields:
+- bill_period_from_date
+- bill_period_to_date
+- statement_id
+column_map:
+  statement_path:
+    source_column: null
+    confidence: 0.0
+  bill_period_from_date:
+    source_column: START_DATE
+    confidence: 0.181
+  bill_period_to_date:
+    source_column: END_DATE
+    confidence: 0.41
+  statement_id:
+    source_column: ADDRESS_ID
+    confidence: 0.2
+  issued_date:
+    source_column: END_DATE
+    confidence: 0.103
+  number:
+    source_column: null
+    confidence: 0.0
+  gross_amount:
+    source_column: null
+    confidence: 0.0
+  average_daily_usage:
+    source_column: null
+    confidence: 0.0
+  total_consumption:
+    source_column: null
+    confidence: 0.0
+  total_consumption_cost:
+    source_column: null
+    confidence: 0.0
+  total_supply_cost:
+    source_column: null
+    confidence: 0.0
+  total_feed_in_energy:
+    source_column: null
+    confidence: 0.0
+  total_feed_in_cost:
+    source_column: null
+    confidence: 0.0
+  is_reversed:
+    source_column: IS_PRIMARY
+    confidence: 0.055
+  net_emissions:
+    source_column: null
+    confidence: 0.0

@@ -1,0 +1,42 @@
+kraken_entity: AusSupplyCharge
+required_fields:
+- amount
+- line_items
+- product_code
+- transaction_date
+- transaction_id
+- type
+column_map:
+  transaction_id:
+    source_column: null
+    confidence: 0.035
+  transaction_date:
+    source_column: null
+    confidence: 0.01
+  amount:
+    source_column: null
+    confidence: 0.026
+  type:
+    source_column: ADDRESS_TYPE
+    confidence: 0.092
+  note:
+    source_column: notes
+    confidence: 0.297
+  billing_document_identifier:
+    source_column: null
+    confidence: 0.026
+  product_code:
+    source_column: null
+    confidence: 0.03
+  line_items:
+    source_column: null
+    confidence: 0.009
+  tax_items:
+    source_column: null
+    confidence: 0.011
+  display_note:
+    source_column: null
+    confidence: 0.031
+  supply_point_identifier:
+    source_column: null
+    confidence: 0.009

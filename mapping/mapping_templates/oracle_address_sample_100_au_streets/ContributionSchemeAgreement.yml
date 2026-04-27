@@ -1,0 +1,25 @@
+kraken_entity: ContributionSchemeAgreement
+required_fields:
+- active_period_start_date
+- amount
+- interval
+- scheme
+column_map:
+  scheme:
+    source_column: null
+    confidence: 0.032
+  active_period_start_date:
+    source_column: START_DATE
+    confidence: 0.132
+  active_period_end_date:
+    source_column: END_DATE
+    confidence: 0.356
+  interval:
+    source_column: null
+    confidence: 0.0
+  amount:
+    source_column: null
+    confidence: 0.0
+  periods:
+    source_column: null
+    confidence: 0.0

@@ -1,0 +1,60 @@
+kraken_entity: PropertyAdministrator
+required_fields: []
+column_map:
+  given_name:
+    source_column: name
+    confidence: 0.343
+  family_name:
+    source_column: name
+    confidence: 0.339
+  email:
+    source_column: ADDRESS_TYPE
+    confidence: 0.079
+  mobile:
+    source_column: null
+    confidence: 0.01
+  landline:
+    source_column: null
+    confidence: 0.01
+  role:
+    source_column: null
+    confidence: 0.018
+  effective_from:
+    source_column: null
+    confidence: 0.009
+  effective_to:
+    source_column: null
+    confidence: 0.011
+  billing_name:
+    source_column: name
+    confidence: 0.186
+  date_of_birth:
+    source_column: null
+    confidence: 0.006
+  title:
+    source_column: null
+    confidence: 0.003
+  salutation:
+    source_column: null
+    confidence: 0.003
+  deceased:
+    source_column: null
+    confidence: 0.022
+  address1:
+    source_column: ADDRESS_TYPE
+    confidence: 0.113
+  address2:
+    source_column: ADDRESS_TYPE
+    confidence: 0.113
+  address3:
+    source_column: ADDRESS_TYPE
+    confidence: 0.113
+  address4:
+    source_column: ADDRESS_TYPE
+    confidence: 0.113
+  address5:
+    source_column: ADDRESS_TYPE
+    confidence: 0.113
+  postcode:
+    source_column: null
+    confidence: 0.0

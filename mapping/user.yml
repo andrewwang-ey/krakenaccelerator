@@ -1,6 +1,3 @@
-# mapping/address.yml
-# Defines how the client's CSV maps to Kraken's BillingAddressInput API.
-# One mapping file per entity type. Add new files for accounts, meters, etc.
 
 kraken_entity: UserInput
 

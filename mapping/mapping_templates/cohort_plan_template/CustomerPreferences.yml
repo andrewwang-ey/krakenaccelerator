@@ -1,0 +1,30 @@
+kraken_entity: CustomerPreferences
+required_fields: []
+column_map:
+  opted_into_sms:
+    source_column: null
+    confidence: 0.017
+  opted_into_whatsapp:
+    source_column: null
+    confidence: 0.017
+  opted_into_recommended:
+    source_column: null
+    confidence: 0.017
+  opted_into_updates:
+    source_column: null
+    confidence: 0.019
+  opted_into_third_parties:
+    source_column: null
+    confidence: 0.019
+  opted_into_offers:
+    source_column: null
+    confidence: 0.023
+  opted_into_associated_companies:
+    source_column: null
+    confidence: 0.02
+  is_user_psr_consent_obtained:
+    source_column: priority
+    confidence: 0.182
+  partner_password:
+    source_column: priority
+    confidence: 0.244

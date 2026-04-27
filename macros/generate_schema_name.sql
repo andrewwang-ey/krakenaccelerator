@@ -1,5 +1,5 @@
 -- By default dbt prefixes schema names with the target schema (e.g. main_landing).
--- This macro overrides that so schemas are clean: landing, bronze, silver, gold.
+-- This macro overrides that so schemas are clean: landing, validated, mapped, output.
 {% macro generate_schema_name(custom_schema_name, node) %}
     {%- if custom_schema_name is none -%}
         {{ target.schema }}

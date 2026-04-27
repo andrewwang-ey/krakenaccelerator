@@ -1,0 +1,15 @@
+kraken_entity: StandardizedError
+required_fields:
+- attr
+- code
+- detail
+column_map:
+  detail:
+    source_column: description
+    confidence: 0.39
+  code:
+    source_column: null
+    confidence: 0.012
+  attr:
+    source_column: null
+    confidence: 0.01

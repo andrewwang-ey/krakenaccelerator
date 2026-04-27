@@ -1,0 +1,21 @@
+kraken_entity: AusPaymentInstructionBankAccount
+required_fields:
+- account_holder
+- account_number
+- bsb
+column_map:
+  account_holder:
+    source_column: name
+    confidence: 0.172
+  account_number:
+    source_column: null
+    confidence: 0.048
+  sort_code:
+    source_column: null
+    confidence: 0.007
+  iban:
+    source_column: null
+    confidence: 0.007
+  bsb:
+    source_column: STATE
+    confidence: 0.231

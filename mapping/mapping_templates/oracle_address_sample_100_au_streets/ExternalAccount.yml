@@ -1,0 +1,217 @@
+kraken_entity: ExternalAccount
+required_fields:
+- import_supplier
+column_map:
+  metadata:
+    source_column: null
+    confidence: 0.022
+  references:
+    source_column: null
+    confidence: 0.0
+  notes:
+    source_column: null
+    confidence: 0.0
+  sales_channel:
+    source_column: null
+    confidence: 0.021
+  sales_subchannel:
+    source_column: null
+    confidence: 0.015
+  customers:
+    source_column: null
+    confidence: 0.0
+  communication_preference:
+    source_column: null
+    confidence: 0.0
+  account_type:
+    source_column: null
+    confidence: 0.031
+  import_supplier:
+    source_column: null
+    confidence: 0.028
+  account_number:
+    source_column: null
+    confidence: 0.03
+  external_account_number:
+    source_column: null
+    confidence: 0.028
+  unknown_occupier:
+    source_column: null
+    confidence: 0.0
+  billing_email:
+    source_column: ADDRESS_LINE_2
+    confidence: 0.063
+  billing_name:
+    source_column: null
+    confidence: 0.044
+  billing_sub_name:
+    source_column: null
+    confidence: 0.033
+  billing_customer_reference:
+    source_column: null
+    confidence: 0.026
+  billing_attention_of:
+    source_column: null
+    confidence: 0.022
+  billing_address:
+    source_column: ADDRESS_LINE_2
+    confidence: 0.104
+  billing_address1:
+    source_column: ADDRESS_LINE_2
+    confidence: 0.441
+  billing_address2:
+    source_column: ADDRESS_LINE_2
+    confidence: 0.441
+  billing_address3:
+    source_column: ADDRESS_LINE_2
+    confidence: 0.441
+  billing_address4:
+    source_column: ADDRESS_LINE_2
+    confidence: 0.441
+  billing_address5:
+    source_column: ADDRESS_LINE_2
+    confidence: 0.441
+  billing_postcode:
+    source_column: ADDRESS_TYPE
+    confidence: 0.124
+  billing_delivery_point_identifier:
+    source_column: COUNTRY_CODE
+    confidence: 0.062
+  account_billing_options:
+    source_column: ADDRESS_TYPE
+    confidence: 0.056
+  is_business:
+    source_column: IS_PRIMARY
+    confidence: 0.05
+  is_managed:
+    source_column: null
+    confidence: 0.04
+  is_portfolio_lead:
+    source_column: null
+    confidence: 0.023
+  portfolio:
+    source_column: null
+    confidence: 0.0
+  portfolio_settings:
+    source_column: null
+    confidence: 0.027
+  portfolio_references:
+    source_column: null
+    confidence: 0.0
+  date_of_sale:
+    source_column: END_DATE
+    confidence: 0.094
+  transfer_balance:
+    source_column: null
+    confidence: 0.0
+  business_type:
+    source_column: null
+    confidence: 0.027
+  company_number:
+    source_column: null
+    confidence: 0.0
+  business:
+    source_column: null
+    confidence: 0.033
+  document_accessibility:
+    source_column: null
+    confidence: 0.0
+  language_preference:
+    source_column: null
+    confidence: 0.0
+  events:
+    source_column: null
+    confidence: 0.0
+  account_campaigns:
+    source_column: null
+    confidence: 0.0
+  statements:
+    source_column: null
+    confidence: 0.0
+  consents:
+    source_column: null
+    confidence: 0.0
+  payment_schedules:
+    source_column: null
+    confidence: 0.0
+  payment_instructions:
+    source_column: null
+    confidence: 0.0
+  payment_promises:
+    source_column: null
+    confidence: 0.04
+  deposit_agreements:
+    source_column: null
+    confidence: 0.0
+  operations_team_name:
+    source_column: null
+    confidence: 0.0
+  debts:
+    source_column: null
+    confidence: 0.0
+  supply_addresses:
+    source_column: null
+    confidence: 0.0
+  hardship_agreements:
+    source_column: null
+    confidence: 0.0
+  complaints:
+    source_column: null
+    confidence: 0.0
+  payment_adequacy_changes:
+    source_column: null
+    confidence: 0.02
+  last_payment_review_date:
+    source_column: END_DATE
+    confidence: 0.053
+  partner_organisations:
+    source_column: null
+    confidence: 0.0
+  account_contracts:
+    source_column: null
+    confidence: 0.0
+  payment_preferences:
+    source_column: null
+    confidence: 0.0
+  last_statement_balance:
+    source_column: null
+    confidence: 0.0
+  last_statement_closing_date:
+    source_column: null
+    confidence: 0.038
+  last_statement_issue_date:
+    source_column: END_DATE
+    confidence: 0.067
+  last_billed_to_date:
+    source_column: null
+    confidence: 0.048
+  next_bill_due_date:
+    source_column: END_DATE
+    confidence: 0.083
+  current_statement_transactions:
+    source_column: null
+    confidence: 0.021
+  historical_statement_transactions:
+    source_column: null
+    confidence: 0.023
+  contribution_agreements:
+    source_column: null
+    confidence: 0.017
+  payment_plans:
+    source_column: null
+    confidence: 0.0
+  dunning_path:
+    source_column: null
+    confidence: 0.0
+  payment_terms:
+    source_column: null
+    confidence: 0.046
+  remotely_communicating_meter_opt_out_reason:
+    source_column: null
+    confidence: 0.0
+  dd_reference:
+    source_column: null
+    confidence: 0.0
+  debt:
+    source_column: null
+    confidence: 0.0

@@ -1,0 +1,11 @@
+kraken_entity: StateCharacteristic
+required_fields:
+- code
+- value
+column_map:
+  code:
+    source_column: STATE
+    confidence: 0.098
+  value:
+    source_column: STATE
+    confidence: 0.326

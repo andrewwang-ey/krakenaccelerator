@@ -1,0 +1,34 @@
+kraken_entity: Charge
+required_fields:
+- amount
+- transaction_date
+- transaction_id
+- type
+column_map:
+  transaction_id:
+    source_column: ADDRESS_ID
+    confidence: 0.109
+  transaction_date:
+    source_column: END_DATE
+    confidence: 0.145
+  amount:
+    source_column: null
+    confidence: 0.01
+  type:
+    source_column: null
+    confidence: 0.047
+  note:
+    source_column: null
+    confidence: 0.0
+  billing_document_identifier:
+    source_column: null
+    confidence: 0.027
+  reason:
+    source_column: null
+    confidence: 0.0
+  tax_items:
+    source_column: null
+    confidence: 0.0
+  display_note:
+    source_column: null
+    confidence: 0.0

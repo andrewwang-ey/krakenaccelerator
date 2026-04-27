@@ -1,0 +1,17 @@
+kraken_entity: AccountConsent
+required_fields:
+- type
+- value
+column_map:
+  type:
+    source_column: ADDRESS_TYPE
+    confidence: 0.051
+  value:
+    source_column: null
+    confidence: 0.048
+  signed_at:
+    source_column: null
+    confidence: 0.014
+  description:
+    source_column: description
+    confidence: 0.354

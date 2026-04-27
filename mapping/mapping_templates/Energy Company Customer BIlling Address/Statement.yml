@@ -1,0 +1,27 @@
+kraken_entity: Statement
+required_fields:
+- bill_period_from_date
+- bill_period_to_date
+- statement_id
+column_map:
+  statement_path:
+    source_column: null
+    confidence: 0.0
+  bill_period_from_date:
+    source_column: START_DATE
+    confidence: 0.181
+  bill_period_to_date:
+    source_column: END_DATE
+    confidence: 0.41
+  statement_id:
+    source_column: ADDRESS_ID
+    confidence: 0.2
+  issued_date:
+    source_column: END_DATE
+    confidence: 0.103
+  number:
+    source_column: null
+    confidence: 0.0
+  gross_amount:
+    source_column: null
+    confidence: 0.0

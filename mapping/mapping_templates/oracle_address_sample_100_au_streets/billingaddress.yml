@@ -1,0 +1,35 @@
+kraken_entity: AusBillingAddress
+
+# Required by AusBillingAddress schema — rows missing these are rejected.
+# 'country' is the hard schema required field.
+# locality, administrative_area, postal_code are required by the
+# Kraken validator "Validate required fields for Australian billing address".
+required_fields:
+  - COUNTRY_CODE
+  - CITY
+  - STATE
+  - POSTCODE
+
+# Maps Kraken API field name -> client CSV column name (flat format)
+column_map:
+  street_address:        ADDRESS_LINE_2
+  dependent_locality:    ADDRESS_LINE_1
+  locality:              CITY
+  administrative_area:   STATE
+  postal_code:           POSTCODE
+  country:               COUNTRY_CODE
+  delivery_point_identifier: ADDRESS_ID
+  # Not mapped — no matching column: name, organization, structured_street_address, sorting_code
+
+# Optional value transformations on CSV columns
+transformations: {}
+
+# Filter out addresses that have been closed / superseded
+active_record_filter:
+  field: END_DATE
+  condition: IS NULL
+
+
+
+
+

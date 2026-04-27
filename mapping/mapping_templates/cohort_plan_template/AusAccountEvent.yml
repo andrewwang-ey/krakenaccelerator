@@ -1,0 +1,23 @@
+kraken_entity: AusAccountEvent
+required_fields:
+- category
+- description
+- event_type
+- occurred_at
+- subcategory
+column_map:
+  event_type:
+    source_column: ADDRESS_TYPE
+    confidence: 0.062
+  category:
+    source_column: null
+    confidence: 0.025
+  subcategory:
+    source_column: null
+    confidence: 0.019
+  description:
+    source_column: description
+    confidence: 0.562
+  occurred_at:
+    source_column: null
+    confidence: 0.002

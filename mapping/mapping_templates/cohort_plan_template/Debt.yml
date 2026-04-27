@@ -1,0 +1,24 @@
+kraken_entity: Debt
+required_fields: []
+column_map:
+  agency_name:
+    source_column: name
+    confidence: 0.305
+  start_date:
+    source_column: null
+    confidence: 0.035
+  is_insolvent:
+    source_column: null
+    confidence: 0.05
+  cais_reference:
+    source_column: null
+    confidence: 0.011
+  aged_debt:
+    source_column: null
+    confidence: 0.028
+  campaign:
+    source_column: null
+    confidence: 0.006
+  notes:
+    source_column: notes
+    confidence: 0.402

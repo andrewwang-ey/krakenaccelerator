@@ -1,0 +1,9 @@
+kraken_entity: BusinessImportProcessCreation
+required_fields: []
+column_map:
+  kraken_business_id:
+    source_column: ADDRESS_ID
+    confidence: 0.107
+  external_business_identifier:
+    source_column: ADDRESS_ID
+    confidence: 0.054

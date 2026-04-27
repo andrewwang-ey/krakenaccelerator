@@ -1,0 +1,16 @@
+kraken_entity: BusinessPortfolio
+required_fields:
+- portfolio_references
+column_map:
+  portfolio_references:
+    source_column: null
+    confidence: 0.02
+  portfolio_settings:
+    source_column: null
+    confidence: 0.027
+  billing_name:
+    source_column: name
+    confidence: 0.205
+  notes:
+    source_column: notes
+    confidence: 0.3

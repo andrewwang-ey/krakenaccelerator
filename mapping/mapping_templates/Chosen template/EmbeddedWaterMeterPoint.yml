@@ -1,0 +1,83 @@
+kraken_entity: EmbeddedWaterMeterPoint
+required_fields:
+- installation_id
+- installation_type
+- meters
+- mpxn
+- plant_fuel_type
+- pricing_zone
+- reading_route
+- supply_start_date
+column_map:
+  identifier:
+    source_column: null
+    confidence: 0.0
+  supply_type:
+    source_column: null
+    confidence: 0.0
+  supply_start_date:
+    source_column: null
+    confidence: 0.0
+  supply_end_date:
+    source_column: null
+    confidence: 0.0
+  agreements:
+    source_column: null
+    confidence: 0.0
+  last_billed_to_date:
+    source_column: null
+    confidence: 0.0
+  mpxn:
+    source_column: null
+    confidence: 0.0
+  address:
+    source_column: null
+    confidence: 0.0
+  multiplier:
+    source_column: null
+    confidence: 0.0
+  access_details:
+    source_column: null
+    confidence: 0.0
+  hazard_details:
+    source_column: null
+    confidence: 0.0
+  dog_code:
+    source_column: null
+    confidence: 0.0
+  meter_position:
+    source_column: null
+    confidence: 0.0
+  sensitive_load:
+    source_column: null
+    confidence: 0.0
+  meters:
+    source_column: null
+    confidence: 0.0
+  parent_mirn:
+    source_column: null
+    confidence: 0.0
+  parent_nmi:
+    source_column: null
+    confidence: 0.0
+  installation_id:
+    source_column: "\uFEFFID"
+    confidence: 0.167
+  parent_installation_id:
+    source_column: "\uFEFFID"
+    confidence: 0.129
+  installation_type:
+    source_column: null
+    confidence: 0.0
+  plant_temperature:
+    source_column: null
+    confidence: 0.0
+  plant_fuel_type:
+    source_column: null
+    confidence: 0.0
+  reading_route:
+    source_column: null
+    confidence: 0.0
+  pricing_zone:
+    source_column: null
+    confidence: 0.0

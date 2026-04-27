@@ -1,0 +1,10 @@
+kraken_entity: DunningPath
+required_fields:
+- path_name
+column_map:
+  path_name:
+    source_column: name
+    confidence: 0.187
+  start_date:
+    source_column: null
+    confidence: 0.028

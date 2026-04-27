@@ -19,12 +19,12 @@ models:
     landing:
       +schema: landing
       +materialized: table
-    bronze:
-      +schema: bronze
+    validated:
+      +schema: validated
       +materialized: table
-    silver:
-      +schema: silver
+    mapped:
+      +schema: mapped
       +materialized: table
-    gold:
-      +schema: gold
+    output:
+      +schema: output
       +materialized: table

@@ -1,0 +1,31 @@
+kraken_entity: AusLifeSupport
+required_fields:
+- life_support_date
+- life_support_equipment
+- life_support_status
+- registration_state
+column_map:
+  registration_state:
+    source_column: STATE
+    confidence: 0.306
+  life_support_status:
+    source_column: null
+    confidence: 0.001
+  life_support_equipment:
+    source_column: null
+    confidence: 0.004
+  life_support_date:
+    source_column: null
+    confidence: 0.006
+  contact_user_email:
+    source_column: null
+    confidence: 0.041
+  preferred_contact_method:
+    source_column: ADDRESS_TYPE
+    confidence: 0.111
+  registration_owner:
+    source_column: null
+    confidence: 0.021
+  details:
+    source_column: null
+    confidence: 0.029

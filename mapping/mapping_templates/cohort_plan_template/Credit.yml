@@ -1,0 +1,31 @@
+kraken_entity: Credit
+required_fields:
+- amount
+- transaction_date
+- transaction_id
+- type
+column_map:
+  transaction_id:
+    source_column: null
+    confidence: 0.035
+  transaction_date:
+    source_column: null
+    confidence: 0.01
+  amount:
+    source_column: null
+    confidence: 0.026
+  type:
+    source_column: ADDRESS_TYPE
+    confidence: 0.092
+  note:
+    source_column: notes
+    confidence: 0.297
+  billing_document_identifier:
+    source_column: null
+    confidence: 0.026
+  reason:
+    source_column: null
+    confidence: 0.01
+  display_note:
+    source_column: null
+    confidence: 0.031

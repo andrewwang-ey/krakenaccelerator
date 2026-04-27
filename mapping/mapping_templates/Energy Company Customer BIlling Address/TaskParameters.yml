@@ -1,0 +1,12 @@
+kraken_entity: TaskParameters
+required_fields: []
+column_map:
+  schedule_window_start:
+    source_column: START_DATE
+    confidence: 0.065
+  schedule_window_end:
+    source_column: END_DATE
+    confidence: 0.154
+  is_dry_run:
+    source_column: null
+    confidence: 0.038

@@ -1,0 +1,17 @@
+kraken_entity: AccountNote
+required_fields:
+- import_supplier
+- notes
+column_map:
+  import_supplier:
+    source_column: null
+    confidence: 0.026
+  external_account_number:
+    source_column: null
+    confidence: 0.038
+  account_number:
+    source_column: null
+    confidence: 0.039
+  notes:
+    source_column: notes
+    confidence: 0.326

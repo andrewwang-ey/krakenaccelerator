@@ -1,0 +1,96 @@
+kraken_entity: AusCustomer
+required_fields: []
+column_map:
+  alternative_phone_numbers:
+    source_column: null
+    confidence: 0.0
+  given_name:
+    source_column: null
+    confidence: 0.0
+  family_name:
+    source_column: null
+    confidence: 0.0
+  email:
+    source_column: ADDRESS_LINE_2
+    confidence: 0.077
+  mobile:
+    source_column: null
+    confidence: 0.0
+  landline:
+    source_column: null
+    confidence: 0.0
+  date_of_birth:
+    source_column: END_DATE
+    confidence: 0.093
+  label:
+    source_column: null
+    confidence: 0.0
+  title:
+    source_column: null
+    confidence: 0.0
+  salutation:
+    source_column: null
+    confidence: 0.0
+  deceased:
+    source_column: null
+    confidence: 0.023
+  unable_to_read_meters:
+    source_column: null
+    confidence: 0.02
+  credit_score:
+    source_column: null
+    confidence: 0.0
+  credit_risk_bracket:
+    source_column: null
+    confidence: 0.0
+  details:
+    source_column: null
+    confidence: 0.03
+  user_details:
+    source_column: null
+    confidence: 0.029
+  role:
+    source_column: null
+    confidence: 0.0
+  portfolio_roles:
+    source_column: null
+    confidence: 0.0
+  account_roles:
+    source_column: null
+    confidence: 0.0
+  metadata:
+    source_column: null
+    confidence: 0.022
+  customer_preferences:
+    source_column: null
+    confidence: 0.019
+  consents:
+    source_column: null
+    confidence: 0.0
+  user_identifier:
+    source_column: null
+    confidence: 0.0
+  concession_cards:
+    source_column: null
+    confidence: 0.0
+  concession_credits_paid_current_year:
+    source_column: IS_PRIMARY
+    confidence: 0.118
+  loyalty_cards:
+    source_column: null
+    confidence: 0.0
+  has_family_issues:
+    source_column: null
+    confidence: 0.015
+  family_issues_password:
+    source_column: null
+    confidence: 0.018
+  family_issues_details:
+    source_column: null
+    confidence: 0.023
+  manually_defined_eligibility_periods:
+    source_column: START_DATE
+    confidence: 0.182
+  mpxns_for_outage_contact:
+    source_column: null
+    confidence: 0.0

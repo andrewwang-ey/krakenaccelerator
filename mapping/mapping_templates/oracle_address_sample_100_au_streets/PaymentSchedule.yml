@@ -3,20 +3,54 @@ required_fields:
 - means
 - start_date
 column_map:
-  amount: null
-  day_of_month: null
-  frequency: null
-  means: null
-  start_date: START_DATE
-  end_date: END_DATE
-  is_debt_repayment_plan: null
-  debt_repayment_element: null
-  debt_repayment_end_date: null
-  trigger: null
-  balance_threshold: null
-  ledger_code: null
-  paid_by: null
-  exempt_from_payment_adequacy: null
-  instalments: null
-  delay_strategy: null
-  delay_days: null
+  amount:
+    source_column: null
+    confidence: 0.0
+  day_of_month:
+    source_column: null
+    confidence: 0.027
+  frequency:
+    source_column: null
+    confidence: 0.0
+  means:
+    source_column: null
+    confidence: 0.0
+  start_date:
+    source_column: START_DATE
+    confidence: 0.256
+  end_date:
+    source_column: END_DATE
+    confidence: 0.695
+  is_debt_repayment_plan:
+    source_column: null
+    confidence: 0.038
+  debt_repayment_element:
+    source_column: null
+    confidence: 0.0
+  debt_repayment_end_date:
+    source_column: END_DATE
+    confidence: 0.228
+  trigger:
+    source_column: null
+    confidence: 0.012
+  balance_threshold:
+    source_column: null
+    confidence: 0.0
+  ledger_code:
+    source_column: COUNTRY_CODE
+    confidence: 0.053
+  paid_by:
+    source_column: null
+    confidence: 0.027
+  exempt_from_payment_adequacy:
+    source_column: null
+    confidence: 0.022
+  instalments:
+    source_column: null
+    confidence: 0.0
+  delay_strategy:
+    source_column: null
+    confidence: 0.023
+  delay_days:
+    source_column: null
+    confidence: 0.031

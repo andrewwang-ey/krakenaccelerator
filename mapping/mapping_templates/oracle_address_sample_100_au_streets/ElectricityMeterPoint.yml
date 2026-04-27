@@ -1,0 +1,59 @@
+kraken_entity: ElectricityMeterPoint
+required_fields:
+- mpxn
+- supply_start_date
+column_map:
+  identifier:
+    source_column: null
+    confidence: 0.0
+  supply_type:
+    source_column: null
+    confidence: 0.029
+  supply_start_date:
+    source_column: START_DATE
+    confidence: 0.224
+  supply_end_date:
+    source_column: END_DATE
+    confidence: 0.597
+  agreements:
+    source_column: null
+    confidence: 0.0
+  last_billed_to_date:
+    source_column: START_DATE
+    confidence: 0.061
+  mpxn:
+    source_column: null
+    confidence: 0.0
+  address:
+    source_column: ADDRESS_LINE_2
+    confidence: 0.206
+  multiplier:
+    source_column: null
+    confidence: 0.0
+  access_details:
+    source_column: null
+    confidence: 0.0
+  hazard_details:
+    source_column: null
+    confidence: 0.009
+  dog_code:
+    source_column: null
+    confidence: 0.041
+  meter_position:
+    source_column: null
+    confidence: 0.026
+  sensitive_load:
+    source_column: null
+    confidence: 0.02
+  meters:
+    source_column: null
+    confidence: 0.0
+  use_nmi_discovery:
+    source_column: null
+    confidence: 0.019
+  parent_nmi:
+    source_column: null
+    confidence: 0.0
+  supply_details:
+    source_column: null
+    confidence: 0.0

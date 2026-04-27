@@ -1,0 +1,31 @@
+kraken_entity: ElectricityRegister
+required_fields:
+- register_id
+column_map:
+  network_tariff_code:
+    source_column: null
+    confidence: 0.035
+  unit_of_measure:
+    source_column: null
+    confidence: 0.027
+  multiplier:
+    source_column: null
+    confidence: 0.0
+  register_id:
+    source_column: ADDRESS_ID
+    confidence: 0.2
+  has_readings:
+    source_column: null
+    confidence: 0.0
+  last_billed_to_date:
+    source_column: END_DATE
+    confidence: 0.083
+  effective_ntc:
+    source_column: null
+    confidence: 0.024
+  effective_ntc_from:
+    source_column: null
+    confidence: 0.038
+  effective_ntc_to:
+    source_column: null
+    confidence: 0.039

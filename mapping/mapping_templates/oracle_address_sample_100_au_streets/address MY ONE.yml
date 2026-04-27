@@ -4,7 +4,7 @@
 
 kraken_entity: BillingAddressInput
 
-# Fields that must not be null — rows missing these go to bronze_rejected
+# Fields that must not be null — rows missing these go to rejected
 required_fields:
   - ADDRESS_LINE_1
   - CITY

@@ -1,0 +1,41 @@
+kraken_entity: AusConcessionCard
+required_fields:
+- applies_from_date
+- card_number
+- card_type
+- validation_source
+- validation_status
+column_map:
+  card_type:
+    source_column: null
+    confidence: 0.016
+  card_number:
+    source_column: null
+    confidence: 0.023
+  card_issue_date:
+    source_column: END_DATE
+    confidence: 0.086
+  card_expiry_date:
+    source_column: END_DATE
+    confidence: 0.085
+  applies_from_date:
+    source_column: END_DATE
+    confidence: 0.097
+  applies_to_date:
+    source_column: END_DATE
+    confidence: 0.11
+  validation_status:
+    source_column: null
+    confidence: 0.0
+  validation_source:
+    source_column: null
+    confidence: 0.0
+  last_validated_at:
+    source_column: null
+    confidence: 0.032
+  next_validation_date:
+    source_column: null
+    confidence: 0.029
+  validation_failure_reason:
+    source_column: null
+    confidence: 0.038

@@ -1,0 +1,45 @@
+kraken_entity: EmbeddedElecRegister
+required_fields:
+- active_from
+- dial_format_decimals
+- dial_format_digits
+- multiplier
+- register_id
+- status
+- suffix
+- time_of_day
+- unit_of_measure
+column_map:
+  register_id:
+    source_column: ADDRESS_ID
+    confidence: 0.148
+  unit_of_measure:
+    source_column: null
+    confidence: 0.0
+  time_of_day:
+    source_column: null
+    confidence: 0.0
+  multiplier:
+    source_column: null
+    confidence: 0.035
+  active_from:
+    source_column: END_DATE
+    confidence: 0.058
+  active_to:
+    source_column: END_DATE
+    confidence: 0.06
+  status:
+    source_column: null
+    confidence: 0.027
+  dial_format_digits:
+    source_column: null
+    confidence: 0.0
+  dial_format_decimals:
+    source_column: null
+    confidence: 0.0
+  suffix:
+    source_column: null
+    confidence: 0.03
+  controlled_load:
+    source_column: null
+    confidence: 0.031
