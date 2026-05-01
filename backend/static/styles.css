@@ -1,0 +1,204 @@
+:root {
+  --bg-0: #0b1020;
+  --bg-1: #131a2e;
+  --bg-2: #1c2440;
+  --fg: #e6ecff;
+  --fg-muted: #98a2c3;
+  --accent: #5b8cff;
+  --accent-2: #7ab7ff;
+  --ok: #34d399;
+  --warn: #fbbf24;
+  --err: #f87171;
+  --border: rgba(255, 255, 255, 0.08);
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background:
+    radial-gradient(1000px 600px at 10% -10%, rgba(91, 140, 255, 0.18), transparent 60%),
+    radial-gradient(900px 500px at 110% 10%, rgba(122, 183, 255, 0.12), transparent 55%),
+    var(--bg-0);
+  color: var(--fg);
+  min-height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 40px;
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 16px;
+  color: #0b1020;
+  box-shadow: var(--shadow);
+}
+
+h1 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+}
+
+.tagline {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--fg-muted);
+}
+
+.env-pill {
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--fg-muted);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin: 0 0 12px;
+  letter-spacing: -0.4px;
+}
+
+.hero p {
+  color: var(--fg-muted);
+  max-width: 640px;
+  line-height: 1.55;
+}
+
+.status-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 36px;
+}
+
+.card {
+  background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  box-shadow: var(--shadow);
+}
+
+.card header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+}
+
+.muted {
+  color: var(--fg-muted);
+  font-size: 13px;
+  margin: 0 0 12px;
+}
+
+.card pre {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border);
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
+  min-height: 78px;
+  color: #d2dbf3;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.dot-pending { background: var(--warn); box-shadow: 0 0 0 4px rgba(251, 191, 36, 0.15); }
+.dot-ok      { background: var(--ok);   box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.15); }
+.dot-err     { background: var(--err);  box-shadow: 0 0 0 4px rgba(248, 113, 113, 0.15); }
+
+.actions {
+  margin-top: 28px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn-primary, .btn-ghost {
+  appearance: none;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 80ms ease, opacity 120ms ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #0b1020;
+  box-shadow: var(--shadow);
+}
+
+.btn-primary:hover { transform: translateY(-1px); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--fg);
+  border: 1px solid var(--border);
+}
+
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent-2); }
+
+footer {
+  text-align: center;
+  color: var(--fg-muted);
+  font-size: 12px;
+  padding: 24px;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 600px) {
+  .topbar { padding: 16px 20px; }
+  .hero h2 { font-size: 28px; }
+}

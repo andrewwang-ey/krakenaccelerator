@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kraken Accelerator</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%99%3C/text%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo">KA</span>
+        <div>
+          <h1>Kraken Accelerator</h1>
+          <p class="tagline">Customer data pipeline &amp; ingestion control plane</p>
+        </div>
+      </div>
+      <div class="env-pill" id="envPill">connecting&hellip;</div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>Welcome.</h2>
+        <p>
+          This is the Kraken Accelerator deployment. Use the panel below to verify
+          backend connectivity to Azure SQL and Azure Blob Storage in this
+          subscription.
+        </p>
+      </section>
+
+      <section class="status-grid">
+        <article class="card" data-target="api">
+          <header>
+            <h3>API</h3>
+            <span class="dot dot-pending" id="dot-api"></span>
+          </header>
+          <p class="muted">FastAPI backend</p>
+          <pre id="out-api">checking&hellip;</pre>
+        </article>
+
+        <article class="card" data-target="sql">
+          <header>
+            <h3>Azure SQL</h3>
+            <span class="dot dot-pending" id="dot-sql"></span>
+          </header>
+          <p class="muted">Managed-identity auth via ODBC 18</p>
+          <pre id="out-sql">checking&hellip;</pre>
+        </article>
+
+        <article class="card" data-target="blob">
+          <header>
+            <h3>Azure Blob Storage</h3>
+            <span class="dot dot-pending" id="dot-blob"></span>
+          </header>
+          <p class="muted">Container inventory</p>
+          <pre id="out-blob">checking&hellip;</pre>
+        </article>
+      </section>
+
+      <section class="actions">
+        <button id="refreshBtn" class="btn-primary">Re-run checks</button>
+        <a class="btn-ghost" href="/api" target="_blank" rel="noopener">View raw /api</a>
+      </section>
+    </main>
+
+    <footer>
+      <span id="footerNote">Kraken Accelerator &middot; build <span id="buildTag">dev</span></span>
+    </footer>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -8,3 +8,9 @@ logs/
 dbt_packages/
 .user.yml
 dbt_internal_packages/
+
+# Backend (Azure FastAPI app)
+backend/.venv/
+backend/.env
+backend/*.pyc
+backend/.pytest_cache/
